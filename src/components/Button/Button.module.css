@@ -1,10 +1,14 @@
 .default {
   border-radius: 5px;
   padding: 5px;
-  background-color: #b0cbd8;
+  background-color: white;
   color: #202122;
 }
 
 .primary {
   background-color: #59b398;
+}
+
+.secondary {
+  background-color: #b0cbd8;
 }

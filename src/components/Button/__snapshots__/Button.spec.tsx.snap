@@ -3,7 +3,7 @@
 exports[`components/Button should match snapshot 1`] = `
 <div>
   <button
-    class="default"
+    class="default primary"
   >
     Test text
   </button>

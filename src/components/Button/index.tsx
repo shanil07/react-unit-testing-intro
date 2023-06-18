@@ -8,7 +8,7 @@ type ButtonProps = {
 
 const Button: FC<ButtonProps> = ({ variant, children, ...rest }) => {
   return (
-    <button className={classNames(styles.default, variant)} {...rest}>
+    <button className={classNames(styles.default, styles[variant])} {...rest}>
       {children}
     </button>
   );
