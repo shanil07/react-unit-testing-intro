@@ -6,4 +6,8 @@ describe("components/Button", () => {
     const { getByRole } = render(<Button>Test text</Button>);
     expect(getByRole("button")).toHaveTextContent("Test text");
   });
+  it("should match snapshot", () => {
+    const { container } = render(<Button>Test text</Button>);
+    expect(container).toMatchSnapshot();
+  });
 });

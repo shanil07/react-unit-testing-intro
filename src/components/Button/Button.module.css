@@ -1,0 +1,10 @@
+.default {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #b0cbd8;
+  color: #202122;
+}
+
+.primary {
+  background-color: #59b398;
+}
