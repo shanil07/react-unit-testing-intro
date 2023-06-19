@@ -4,6 +4,36 @@
   padding: 2rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 99%;
+  color: #afd2e9;
+  margin-bottom: 20px;
+  transition: all;
+  transition-duration: 2s;
+}
+
+.active {
+  color: #02130b;
+  background-color: #0dce9e;
+}
+.inactive {
+  background-color: #02130b;
+  color: #0dce9e;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
