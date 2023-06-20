@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, HTMLAttributes, ReactNode } from "react";
+import { FC, HTMLAttributes } from "react";
 import styles from "./Button.module.css";
 
 type ButtonProps = {
