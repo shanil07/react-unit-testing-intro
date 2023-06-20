@@ -22,7 +22,7 @@
   color: #afd2e9;
   margin-bottom: 20px;
   transition: all;
-  transition-duration: 2s;
+  transition-duration: 0.8s;
 }
 
 .active {
