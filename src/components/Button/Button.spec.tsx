@@ -1,17 +1,16 @@
-import { fireEvent, render } from "@testing-library/react";
-import { Button } from "./index";
+import { render, fireEvent } from "@testing-library/react";
+import { Button } from ".";
 
-describe("components/Button", () => {
-  it("should render component", () => {
-    const { getByRole } = render(<Button variant="primary">Test text</Button>);
-    expect(getByRole("button")).toHaveTextContent("Test text");
+describe("Button", () => {
+  it("should render primary variant correctly", () => {
+    const { getByRole } = render(<Button variant="primary">Test</Button>);
+    expect(getByRole("button")).toHaveTextContent("Test");
     expect(getByRole("button")).toHaveClass("primary");
   });
 
-  it("should render correctly for secondary variant", () => {
-    const { getByRole } = render(
-      <Button variant="secondary">Test text</Button>
-    );
+  it("should render secondary variant correctly", () => {
+    const { getByRole } = render(<Button variant="secondary">Test</Button>);
+    expect(getByRole("button")).toHaveTextContent("Test");
     expect(getByRole("button")).toHaveClass("secondary");
   });
 
@@ -24,7 +23,7 @@ describe("components/Button", () => {
     );
     const button = getByRole("button");
     fireEvent.click(button);
-    expect(onClickMock).toHaveBeenCalledTimes(1);
+    expect(onClickMock).toHaveBeenCalledWith("test");
   });
 
   it("should match snapshot", () => {

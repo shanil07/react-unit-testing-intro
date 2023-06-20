@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Button should match snapshot 1`] = `
+exports[`Button should match snapshot 1`] = `
 <div>
   <button
     class="default primary"
+    style="width: 200px;"
   >
     Test text
   </button>

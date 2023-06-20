@@ -8,7 +8,13 @@ type ButtonProps = {
 
 const Button: FC<ButtonProps> = ({ variant, children, ...rest }) => {
   return (
-    <button className={classNames(styles.default, styles[variant])} {...rest}>
+    <button
+      style={{
+        width: "200px",
+      }}
+      className={classNames(styles.default, styles[variant])}
+      {...rest}
+    >
       {children}
     </button>
   );
