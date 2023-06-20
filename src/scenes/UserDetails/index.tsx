@@ -15,12 +15,12 @@ const UserDetails = ({ id }: UserDetailsProps) => {
   const [error, setError] = useState<ApiError | Error | null>(null);
 
   const fetchUser = useCallback(async (id: string) => {
-    try {
-      const response = await fetch(`user/${id}`);
-      const data = await response.json();
+    const response = await fetch(`user/${id}`);
+    const data = await response.json();
+    if (response.status === 200) {
       setUser(data);
-    } catch (e: any) {
-      setError(e);
+    } else {
+      setError({ code: response.status, message: data?.message });
     }
   }, []);
 
@@ -29,7 +29,7 @@ const UserDetails = ({ id }: UserDetailsProps) => {
   }, [fetchUser, id]);
 
   if (error)
-    return <div> Error occurred while loading {error.message ?? ""}</div>;
+    return <div>Error occurred while loading {error.message ?? ""}</div>;
 
   if (!user) return <div>Loading...</div>;
 
