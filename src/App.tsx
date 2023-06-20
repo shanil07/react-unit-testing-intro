@@ -4,7 +4,7 @@ import { useToggle } from "./hooks/useToggle";
 import classNames from "classnames";
 
 function App() {
-  const [active, toggle] = useToggle(false);
+  const { active, toggle } = useToggle(false);
 
   return (
     <div className="container">
