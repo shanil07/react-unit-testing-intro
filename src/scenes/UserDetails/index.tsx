@@ -1,14 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
+import { User } from "../../types/user";
 
 type UserDetailsProps = {
   id: string;
 };
-type User = {
-  id: string;
-  firstName: string;
-  lastName: string;
-  dateOfBirth: string;
-};
+
 type ApiError = {
   code: number;
   message?: string;
